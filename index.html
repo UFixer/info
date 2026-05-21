@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UFixer – Mobile Repair Experts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CIRCUIT BG -->
+<div class="circuit-bg">
+  <svg class="circuit-svg" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#4466ff" stroke-width="1" fill="none" opacity="0.6">
+      <path d="M0 200 H200 V100 H400 V300 H600 V150 H800"/>
+      <path d="M0 500 H150 V400 H350 V600 H500 V350 H700 V550 H900"/>
+      <path d="M300 900 V700 H500 V800 H700 V600 H900 V750 H1100"/>
+      <path d="M800 0 V200 H1000 V100 H1200 V300 H1440"/>
+      <path d="M1100 500 H1300 V350 H1440"/>
+      <circle cx="200" cy="200" r="4" fill="#4466ff"/>
+      <circle cx="400" cy="100" r="4" fill="#4466ff"/>
+      <circle cx="400" cy="300" r="4" fill="#4466ff"/>
+      <circle cx="600" cy="150" r="4" fill="#f47b20"/>
+      <circle cx="150" cy="400" r="4" fill="#4466ff"/>
+      <circle cx="350" cy="600" r="4" fill="#4466ff"/>
+      <circle cx="500" cy="350" r="4" fill="#f47b20"/>
+      <circle cx="700" cy="550" r="4" fill="#4466ff"/>
+      <circle cx="500" cy="800" r="4" fill="#4466ff"/>
+      <circle cx="700" cy="600" r="4" fill="#f47b20"/>
+      <circle cx="900" cy="750" r="4" fill="#4466ff"/>
+      <circle cx="1000" cy="200" r="4" fill="#4466ff"/>
+      <circle cx="1200" cy="100" r="4" fill="#f47b20"/>
+      <circle cx="1200" cy="300" r="4" fill="#4466ff"/>
+      <circle cx="1300" cy="350" r="4" fill="#4466ff"/>
+    </g>
+  </svg>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="logo.png" alt="UFixer Logo" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+    <span class="nav-brand">UFIXER</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#repairbooks">RepairBooks</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#social">Social</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923136969696" class="nav-cta" target="_blank">📲 WhatsApp</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><span></span>PROFESSIONAL MOBILE REPAIR EXPERTS</div>
+    <img src="logo.png" alt="UFixer Hero Logo" class="hero-logo" style="width:120px;height:120px;margin: 20px auto;border-radius:50%;border:2px solid var(--orange);box-shadow:var(--glow);">
+    <h1 class="hero-title">Bashir <span>Ahmad</span></h1>
+    <h2 class="hero-sub">Welcome to UFixer Remote Services</h2>
+    <p class="hero-desc">Your ultimate destination for professional, remote mobile repairing services and top-tier software solutions. Experience fast, reliable, and secure support from anywhere.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="#payment" class="btn-secondary">Make a Payment</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar" style="display:flex;justify-content:center;gap:40px;padding:30px;background:rgba(0,0,0,0.3);border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);flex-wrap:wrap;">
+  <div class="stat-item" style="text-align:center;">
+    <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">10k+</div>
+    <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Devices Fixed</div>
+  </div>
+  <div class="stat-item" style="text-align:center;">
+    <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">99%</div>
+    <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Success Rate</div>
+  </div>
+  <div class="stat-item" style="text-align:center;">
+    <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">24/7</div>
+    <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Remote Support</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">WHAT I DO</div>
+      <h2 class="section-title">Premium <span>Services</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="services-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
+      <div class="service-card" style="background:rgba(18,48,160,0.18);border:1px solid rgba(30,75,216,0.3);padding:30px;border-radius:16px;">
+        <div class="service-icon" style="font-size:2rem;color:var(--orange);margin-bottom:20px;"><i class="fas fa-mobile-alt"></i></div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;margin-bottom:15px;">Online Remote Services</h3>
+        <p style="color:var(--grey);line-height:1.6;margin-bottom:20px;">Expert remote unbricking, flashing, and software troubleshooting for all major mobile brands.</p>
+        <a href="https://mobifirms.com/services" target="_blank" class="btn-secondary" style="display:inline-block;margin-top:10px;padding:10px 24px;font-size:0.95rem;">View Details <i class="fas fa-arrow-right" style="margin-left:5px;"></i></a>
+      </div>
+      <div class="service-card" style="background:rgba(18,48,160,0.18);border:1px solid rgba(30,75,216,0.3);padding:30px;border-radius:16px;">
+        <div class="service-icon" style="font-size:2rem;color:var(--orange);margin-bottom:20px;"><i class="fas fa-tools"></i></div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;margin-bottom:15px;">Tools Rental</h3>
+        <p style="color:var(--grey);line-height:1.6;margin-bottom:20px;">Rent professional mobile repair tools directly from Mobifirms to boost your repair capabilities.</p>
+        <a href="https://mobifirms.com/tools-rental" target="_blank" class="btn-secondary" style="display:inline-block;margin-top:10px;padding:10px 24px;font-size:0.95rem;">View Details <i class="fas fa-arrow-right" style="margin-left:5px;"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPAIRBOOKS -->
+<section id="repairbooks" class="section" style="background: rgba(18,48,160,0.1);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">SOFTWARE SOLUTION</div>
+      <h2 class="section-title">Repair<span>Books</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="feature-wrap" style="display:flex;align-items:center;gap:50px;flex-wrap:wrap;">
+      <div class="feature-text" style="flex:1;min-width:300px;">
+        <div class="app-badge" style="display:inline-block;padding:5px 12px;background:var(--orange);color:#fff;border-radius:20px;font-size:0.75rem;font-weight:bold;margin-bottom:15px;letter-spacing:1px;">FREE ANDROID APP</div>
+        <h3 class="app-title" style="font-family:'Orbitron',sans-serif;font-size:2rem;margin-bottom:15px;">Shop Management Made Easy</h3>
+        <p class="app-desc" style="color:var(--grey);line-height:1.6;margin-bottom:25px;font-size:1.1rem;">Organize your repair shop efficiently. Manage tickets, track status, and satisfy your customers.</p>
+        <ul class="feature-list" style="list-style:none;padding:0;margin-bottom:30px;">
+          <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Client Management</li>
+          <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Device Tracking</li>
+          <li style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Income Reports</li>
+        </ul>
+        <a href="https://ufixer.github.io/RepairBooks/" target="_blank" class="btn-primary" style="margin-top:20px;">Download Now</a>
+      </div>
+      <div class="feature-visual" style="flex:1;min-width:300px;display:flex;justify-content:center;">
+        <div class="app-mockup" style="background:rgba(0,0,0,0.4);border:2px solid rgba(68,102,255,0.4);border-radius:30px;padding:40px;box-shadow:0 0 40px rgba(68,102,255,0.2);">
+          <i class="fas fa-mobile" style="font-size: 12rem; color: #4466ff;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment" class="section" style="background:var(--blue-deep);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">SECURE TRANSACTIONS</div>
+      <h2 class="section-title">Payment <span>Details</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="payment-grid">
+      <!-- UBL Bank -->
+      <div class="payment-card">
+        <div class="payment-card-header">
+          <div class="payment-icon"><i class="fas fa-university"></i></div>
+          <h3>UBL Bank</h3>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">A/C NUMBER</span>
+          <div class="payment-val" onclick="copyText('1755-280525299')">1755-280525299</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">IBAN</span>
+          <div class="payment-val" onclick="copyText('PK04UNIL0109000280525299')">PK04UNIL0109000280525299</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">RAAST</span>
+          <div class="payment-val" onclick="copyText('0313 6969696')">0313 6969696</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+      </div>
+      
+      <!-- Digital Wallets -->
+      <div class="payment-card">
+        <div class="payment-card-header">
+          <div class="payment-icon"><i class="fas fa-wallet"></i></div>
+          <h3>Digital Wallets</h3>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">SKRILL</span>
+          <div class="payment-val" onclick="copyText('mobifirms@gmail.com')">mobifirms@gmail.com</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">BINANCE ID</span>
+          <div class="payment-val" onclick="copyText('35215239')">35215239</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">USDT (TRC20 ONLY)</span>
+          <div class="payment-val" onclick="copyText('TLvAGEKiNCibz8kfpJoeRhuDJ7RaTbKpdW')">TLvAGEKiNCibz8kfpJoeRhuDJ7RaTbKpdW</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">CONNECT WITH US</div>
+      <h2 class="section-title">Follow <span>UFixer</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="social-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;">
+      <a href="https://www.youtube.com/UFixer" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#ff0000;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-youtube"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">YouTube</div>
+      </a>
+      <a href="https://www.tiktok.com/@ufixer" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#fff;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-tiktok"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">TikTok</div>
+      </a>
+      <a href="https://www.instagram.com/Ufixers" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#e1306c;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-instagram"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Instagram</div>
+      </a>
+      <a href="https://www.facebook.com/Ufixers" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#1877f2;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-facebook"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Facebook</div>
+      </a>
+      <a href="https://twitter.com/Geeks_Board" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#1da1f2;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-twitter"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Twitter</div>
+      </a>
+      <a href="https://t.me/uFixer" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#0088cc;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-telegram"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Telegram Ch</div>
+      </a>
+      <a href="https://t.me/uFixers" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#0088cc;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-telegram"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Telegram Grp</div>
+      </a>
+      <a href="https://whatsapp.com/channel/0029Vabkv9dL7UVY9Ez27j2q" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
+        <div class="social-icon" style="color:#25d366;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-whatsapp"></i></div>
+        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">WhatsApp Ch</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="padding-bottom:100px;">
+  <div class="container">
+    <div class="contact-wrap" style="background:rgba(18,48,160,0.18);border:1px solid rgba(30,75,216,0.3);border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:30px;">
+      <div class="section-header" style="text-align: left; align-items: flex-start; margin:0;">
+        <div class="section-tag">GET IN TOUCH</div>
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="section-line" style="margin: 20px 0;"></div>
+        <p style="color:var(--grey); margin-bottom: 0; max-width:300px; line-height:1.6;">Share TXID or screenshot after payment on WhatsApp.</p>
+      </div>
+      <div class="contact-cards" style="display:flex;gap:20px;flex-wrap:wrap;flex:1;justify-content:flex-end;">
+        <div class="contact-card" style="display:flex;align-items:center;gap:15px;background:rgba(0,0,0,0.3);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);min-width:250px;">
+          <div class="contact-card-icon" style="font-size:2rem;color:var(--orange);"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <div class="contact-card-label" style="font-size:0.8rem;color:var(--grey);letter-spacing:1px;font-family:'Rajdhani',sans-serif;">WHATSAPP</div>
+            <div class="contact-card-val" style="font-size:1.2rem;font-family:'Rajdhani',sans-serif;font-weight:700;">+923136969696</div>
+          </div>
+        </div>
+        <div class="contact-card" style="display:flex;align-items:center;gap:15px;background:rgba(0,0,0,0.3);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);min-width:250px;">
+          <div class="contact-card-icon" style="font-size:2rem;color:var(--orange);"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-card-label" style="font-size:0.8rem;color:var(--grey);letter-spacing:1px;font-family:'Rajdhani',sans-serif;">EMAIL</div>
+            <div class="contact-card-val" style="font-size:1.2rem;font-family:'Rajdhani',sans-serif;font-weight:700;">youfixers@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,0.05);background:#070a14;">
+  <div class="footer-brand" style="font-family:'Orbitron',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:2px;margin-bottom:10px;"><span style="color:var(--orange)">U</span>FIXER</div>
+  <div class="footer-copy" style="color:var(--grey);font-family:'Rajdhani',sans-serif;font-size:0.9rem;">© 2026 Bashir Ahmad. All rights reserved.</div>
+</footer>
+
+<a href="https://wa.me/923136969696" target="_blank" class="wa-float" style="position:fixed;bottom:30px;right:30px;width:60px;height:60px;background:#25d366;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:30px;box-shadow:0 4px 10px rgba(37,211,102,0.4);z-index:100;transition:all 0.3s;text-decoration:none;">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+<script>
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      alert('Copied: ' + text);
+    }, function(err) {
+      console.error('Could not copy text: ', err);
+    });
+  }
+</script>
+</body>
+</html>
