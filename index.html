@@ -4,12 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UFixer – Mobile Repair Experts</title>
+<meta name="description" content="UFixer – Professional remote mobile repairing services and top-tier shop management software solutions by Bashir Ahmad. Fast, secure support.">
+<meta name="keywords" content="UFixer, remote repair, mobile repairing, shop management software, RepairBooks, Bashir Ahmad, Pakistan mobile repair">
+<meta name="author" content="Bashir Ahmad">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=1.7">
 </head>
 <body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast-notif">
+  <i class="fas fa-check-circle" style="color: var(--orange);"></i>
+  <span id="toastMsg">Copied to clipboard!</span>
+</div>
 
 <!-- CIRCUIT BG -->
 <div class="circuit-bg">
@@ -62,13 +73,28 @@
 <section id="hero">
   <div class="hero-content">
     <div class="hero-badge"><span></span>PROFESSIONAL MOBILE REPAIR EXPERTS</div>
-    <img src="logo.png" alt="UFixer Hero Logo" class="hero-logo" style="width:120px;height:120px;margin: 20px auto;border-radius:50%;border:2px solid var(--orange);box-shadow:var(--glow);">
-    <h1 class="hero-title">Bashir <span>Ahmad</span></h1>
+    <div class="hero-logo-wrap">
+      <img src="logo.png" alt="UFixer Hero Logo" class="hero-logo">
+      <div class="logo-ring"></div>
+      <div class="logo-ring2"></div>
+    </div>
+    <h1 class="hero-title" style="margin-bottom:0;">Bashir <span>Ahmad</span></h1>
     <h2 class="hero-sub">Welcome to UFixer Remote Services</h2>
     <p class="hero-desc">Your ultimate destination for professional, remote mobile repairing services and top-tier software solutions. Experience fast, reliable, and secure support from anywhere.</p>
     <div class="hero-btns">
       <a href="#services" class="btn-primary">Explore Services</a>
       <a href="#payment" class="btn-secondary">Make a Payment</a>
+    </div>
+  </div>
+
+  <!-- Animated Scroll Indicator -->
+  <div class="scroll-indicator" onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div class="arrows">
+      <span></span>
+      <span></span>
     </div>
   </div>
 </section>
@@ -124,22 +150,21 @@
       <div class="section-line"></div>
     </div>
     
-    <div class="feature-wrap" style="display:flex;align-items:center;gap:50px;flex-wrap:wrap;">
-      <div class="feature-text" style="flex:1;min-width:300px;">
+    <div class="feature-wrap">
+      <div class="feature-text">
         <div class="app-badge" style="display:inline-block;padding:5px 12px;background:var(--orange);color:#fff;border-radius:20px;font-size:0.75rem;font-weight:bold;margin-bottom:15px;letter-spacing:1px;">FREE ANDROID APP</div>
         <h3 class="app-title" style="font-family:'Orbitron',sans-serif;font-size:2rem;margin-bottom:15px;">Shop Management Made Easy</h3>
         <p class="app-desc" style="color:var(--grey);line-height:1.6;margin-bottom:25px;font-size:1.1rem;">Organize your repair shop efficiently. Manage tickets, track status, and satisfy your customers.</p>
         <ul class="feature-list" style="list-style:none;padding:0;margin-bottom:30px;">
           <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Client Management</li>
-          <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Device Tracking</li>
+          <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> POS Management</li>
+		  <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Device Tracking</li>
           <li style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Income Reports</li>
         </ul>
         <a href="https://ufixer.github.io/RepairBooks/" target="_blank" class="btn-primary" style="margin-top:20px;">Download Now</a>
       </div>
-      <div class="feature-visual" style="flex:1;min-width:300px;display:flex;justify-content:center;">
-        <div class="app-mockup" style="background:rgba(0,0,0,0.4);border:2px solid rgba(68,102,255,0.4);border-radius:30px;padding:40px;box-shadow:0 0 40px rgba(68,102,255,0.2);">
-          <i class="fas fa-mobile" style="font-size: 12rem; color: #4466ff;"></i>
-        </div>
+      <div class="feature-visual">
+        <img src="app.jpg" alt="RepairBooks App Interface" style="width:100%; max-width:250px; height:auto; max-height:450px; border-radius:24px; box-shadow:0 15px 35px rgba(0,0,0,0.6); z-index:1; position:relative; object-fit:contain;">
       </div>
     </div>
   </div>
@@ -159,10 +184,10 @@
       <div class="payment-card">
         <div class="payment-card-header">
           <div class="payment-icon"><i class="fas fa-university"></i></div>
-          <h3>UBL Bank</h3>
+          <h3>BANK PAYMENTS</h3>
         </div>
         <div class="payment-row">
-          <span class="payment-label">A/C NUMBER</span>
+          <span class="payment-label">UBL A/C NUMBER</span>
           <div class="payment-val" onclick="copyText('1755-280525299')">1755-280525299</div>
           <span class="copy-hint">Click to copy</span>
         </div>
@@ -172,9 +197,28 @@
           <span class="copy-hint">Click to copy</span>
         </div>
         <div class="payment-row">
-          <span class="payment-label">RAAST</span>
+          <span class="payment-label">RAAST/JAZZCASH</span>
           <div class="payment-val" onclick="copyText('0313 6969696')">0313 6969696</div>
           <span class="copy-hint">Click to copy</span>
+        </div>
+        
+        <!-- Crypto QR Codes -->
+        <div class="qr-section">
+          <span class="payment-label">SCAN TO PAY CRYPTO</span>
+          <div class="qr-container">
+            <div class="qr-item" onclick="openQRModal('TRC20.PNG', 'USDT (TRC20)')">
+              <span>TRC20 QR</span>
+              <img src="TRC20.PNG" alt="TRC20 QR">
+            </div>
+            <div class="qr-item" onclick="openQRModal('BEP20.PNG', 'USDT/USDC (BEP20)')">
+              <span>BEP20 QR</span>
+              <img src="BEP20.PNG" alt="BEP20 QR">
+            </div>
+            <div class="qr-item" onclick="openQRModal('SOL.PNG', 'USDC/SOL (SOL)')">
+              <span>SOL QR</span>
+              <img src="SOL.PNG" alt="SOL QR">
+            </div>
+          </div>
         </div>
       </div>
       
@@ -197,6 +241,16 @@
         <div class="payment-row">
           <span class="payment-label">USDT (TRC20 ONLY)</span>
           <div class="payment-val" onclick="copyText('TLvAGEKiNCibz8kfpJoeRhuDJ7RaTbKpdW')">TLvAGEKiNCibz8kfpJoeRhuDJ7RaTbKpdW</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+		<div class="payment-row">
+          <span class="payment-label">USDT/USDC (BEP20 ONLY)</span>
+          <div class="payment-val" onclick="copyText('0x88f5a5d5d1fc04384d548811dc099a90e6399a00')">0x88f5a5d5d1fc04384d548811dc099a90e6399a00</div>
+          <span class="copy-hint">Click to copy</span>
+        </div>
+		<div class="payment-row">
+          <span class="payment-label">USDC/SOL (SOL ONLY)</span>
+          <div class="payment-val" onclick="copyText('HhvwkhmpCKrzwMZoS28RWTK8qWmME9GmJGKiNCsvJXEV')">HhvwkhmpCKrzwMZoS28RWTK8qWmME9GmJGKiNCsvJXEV</div>
           <span class="copy-hint">Click to copy</span>
         </div>
       </div>
@@ -251,30 +305,68 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section" style="padding-bottom:100px;">
+<section id="contact" class="section">
   <div class="container">
-    <div class="contact-wrap" style="background:rgba(18,48,160,0.18);border:1px solid rgba(30,75,216,0.3);border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:30px;">
-      <div class="section-header" style="text-align: left; align-items: flex-start; margin:0;">
-        <div class="section-tag">GET IN TOUCH</div>
-        <h2 class="section-title">Contact <span>Me</span></h2>
-        <div class="section-line" style="margin: 20px 0;"></div>
-        <p style="color:var(--grey); margin-bottom: 0; max-width:300px; line-height:1.6;">Share TXID or screenshot after payment on WhatsApp.</p>
+    <div class="section-header">
+      <div class="section-tag">GET IN TOUCH</div>
+      <h2 class="section-title">Find <span>Me</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="contact-grid">
+      <!-- Left Column: Business Info & Quick Links -->
+      <div class="contact-info">
+        
+        <!-- Address Card -->
+        <div class="contact-address-card">
+          <div class="address-header">
+            <i class="fas fa-store"></i>
+            <div>
+              <h3>uFixer Lab</h3>
+              <p class="owner-name">Bashir Ahmad</p>
+            </div>
+          </div>
+          <div class="address-details">
+            <div class="detail-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Chowk Hujra Near Insaf City</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-city"></i>
+              <span>Hujra Shah Muqeem</span>
+            </div>
+            <div class="detail-row">
+              <i class="fas fa-map"></i>
+              <span>District Okara, Pakistan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Action Links -->
+        <div class="contact-links-wrap">
+          <a href="https://wa.me/923136969696" target="_blank" class="contact-card-link">
+            <div class="link-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="link-info">
+              <span class="link-label">WHATSAPP</span>
+              <span class="link-val">+92 313 6969696</span>
+            </div>
+            <i class="fas fa-external-link-alt link-arrow"></i>
+          </a>
+          <a href="mailto:youfixers@gmail.com" class="contact-card-link">
+            <div class="link-icon"><i class="fas fa-envelope"></i></div>
+            <div class="link-info">
+              <span class="link-label">EMAIL</span>
+              <span class="link-val">youfixers@gmail.com</span>
+            </div>
+            <i class="fas fa-external-link-alt link-arrow"></i>
+          </a>
+        </div>
+
       </div>
-      <div class="contact-cards" style="display:flex;gap:20px;flex-wrap:wrap;flex:1;justify-content:flex-end;">
-        <div class="contact-card" style="display:flex;align-items:center;gap:15px;background:rgba(0,0,0,0.3);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);min-width:250px;">
-          <div class="contact-card-icon" style="font-size:2rem;color:var(--orange);"><i class="fab fa-whatsapp"></i></div>
-          <div>
-            <div class="contact-card-label" style="font-size:0.8rem;color:var(--grey);letter-spacing:1px;font-family:'Rajdhani',sans-serif;">WHATSAPP</div>
-            <div class="contact-card-val" style="font-size:1.2rem;font-family:'Rajdhani',sans-serif;font-weight:700;">+923136969696</div>
-          </div>
-        </div>
-        <div class="contact-card" style="display:flex;align-items:center;gap:15px;background:rgba(0,0,0,0.3);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);min-width:250px;">
-          <div class="contact-card-icon" style="font-size:2rem;color:var(--orange);"><i class="fas fa-envelope"></i></div>
-          <div>
-            <div class="contact-card-label" style="font-size:0.8rem;color:var(--grey);letter-spacing:1px;font-family:'Rajdhani',sans-serif;">EMAIL</div>
-            <div class="contact-card-val" style="font-size:1.2rem;font-family:'Rajdhani',sans-serif;font-weight:700;">youfixers@gmail.com</div>
-          </div>
-        </div>
+
+      <!-- Right Column: Interactive Map Embed -->
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5766.0606502140545!2d73.80344035801959!3d30.759976871699585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391819320a4e050b%3A0x9aab903b17242d94!2suFixer!5e0!3m2!1sen!2s!4v1780655124685!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -289,15 +381,95 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<script src="script.js"></script>
+<script src="script.js?v=1.1"></script>
 <script>
+  let toastTimeout;
   function copyText(text) {
     navigator.clipboard.writeText(text).then(function() {
-      alert('Copied: ' + text);
+      showToast('Copied: ' + text);
     }, function(err) {
       console.error('Could not copy text: ', err);
     });
   }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toastMsg').innerText = msg;
+    toast.style.display = 'flex';
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.style.display = 'none';
+    }, 2500);
+  }
+
+  function openQRModal(src, title) {
+    document.getElementById('modalImg').src = src;
+    document.getElementById('modalTitle').innerText = title;
+    const modal = document.getElementById('qrModal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeQRModal() {
+    const modal = document.getElementById('qrModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  window.onclick = function(event) {
+    const modal = document.getElementById('qrModal');
+    if (event.target == modal) {
+      closeQRModal();
+    }
+  }
+
+  // Custom Cursor Script
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  if (cursor && ring) {
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX;
+      my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top = my + 'px';
+    });
+
+    (function animRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animRing);
+    })();
+
+    const targets = 'a, button, .service-card, .payment-card, .payment-val, .social-card, .contact-card-link, .contact-address-card, .qr-item, .wa-float, .scroll-indicator, .hamburger, .qr-modal-close, .toast-notif';
+    document.querySelectorAll(targets).forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '20px';
+        cursor.style.height = '20px';
+        ring.style.width = '50px';
+        ring.style.height = '50px';
+        ring.style.borderColor = 'rgba(244, 123, 32, 0.8)';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '12px';
+        cursor.style.height = '12px';
+        ring.style.width = '36px';
+        ring.style.height = '36px';
+        ring.style.borderColor = 'rgba(244, 123, 32, 0.5)';
+      });
+    });
+  }
 </script>
+
+<!-- QR Modal -->
+<div id="qrModal" class="qr-modal">
+  <div class="qr-modal-content">
+    <span class="qr-modal-close" onclick="closeQRModal()">&times;</span>
+    <h3 id="modalTitle">USDT (TRC20) QR</h3>
+    <img id="modalImg" src="" alt="QR Code">
+    <button onclick="closeQRModal()" class="btn-primary" style="padding: 10px 24px; font-size: 0.9rem; margin: 0 auto; display: block;">Close</button>
+  </div>
+</div>
 </body>
 </html>
