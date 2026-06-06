@@ -10,9 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=1.8">
+<link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
+<div id="scroll-progress"></div>
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 
@@ -59,8 +60,10 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#repairbooks">RepairBooks</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#payment">Payment</a></li>
-    <li><a href="#social">Social</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="https://wa.me/923136969696" class="nav-cta" target="_blank">📲 WhatsApp</a>
@@ -100,7 +103,7 @@
 </section>
 
 <!-- STATS BAR -->
-<div class="stats-bar" style="display:flex;justify-content:center;gap:40px;padding:30px;background:rgba(0,0,0,0.3);border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);flex-wrap:wrap;">
+<div class="stats-bar">
   <div class="stat-item" style="text-align:center;">
     <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">10k+</div>
     <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Devices Fixed</div>
@@ -116,7 +119,7 @@
 </div>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section reveal">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">WHAT I DO</div>
@@ -124,25 +127,25 @@
       <div class="section-line"></div>
     </div>
     
-    <div class="services-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
-      <div class="service-card" style="background:rgba(18,48,160,0.18);border:1px solid rgba(30,75,216,0.3);padding:30px;border-radius:16px;">
-        <div class="service-icon" style="font-size:2rem;color:var(--orange);margin-bottom:20px;"><i class="fas fa-mobile-alt"></i></div>
-        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;margin-bottom:15px;">Online Remote Services</h3>
-        <p style="color:var(--grey);line-height:1.6;margin-bottom:20px;">Expert remote unbricking, flashing, and software troubleshooting for all major mobile brands.</p>
-        <a href="https://mobifirms.com/services" target="_blank" class="btn-secondary" style="display:inline-block;margin-top:10px;padding:10px 24px;font-size:0.95rem;">View Details <i class="fas fa-arrow-right" style="margin-left:5px;"></i></a>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Online Remote Services</h3>
+        <p>Expert remote unbricking, flashing, and software troubleshooting for all major mobile brands.</p>
+        <a href="https://mobifirms.com/services" target="_blank" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="service-card" style="background:rgba(18,48,160,0.18);border:1px solid rgba(30,75,216,0.3);padding:30px;border-radius:16px;">
-        <div class="service-icon" style="font-size:2rem;color:var(--orange);margin-bottom:20px;"><i class="fas fa-tools"></i></div>
-        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;margin-bottom:15px;">Tools Rental</h3>
-        <p style="color:var(--grey);line-height:1.6;margin-bottom:20px;">Rent professional mobile repair tools directly from Mobifirms to boost your repair capabilities.</p>
-        <a href="https://mobifirms.com/tools-rental" target="_blank" class="btn-secondary" style="display:inline-block;margin-top:10px;padding:10px 24px;font-size:0.95rem;">View Details <i class="fas fa-arrow-right" style="margin-left:5px;"></i></a>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tools"></i></div>
+        <h3>Tools Rental</h3>
+        <p>Rent professional mobile repair tools directly from Mobifirms to boost your repair capabilities.</p>
+        <a href="https://mobifirms.com/tools-rental" target="_blank" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- REPAIRBOOKS -->
-<section id="repairbooks" class="section" style="background: rgba(18,48,160,0.1);">
+<section id="repairbooks" class="section reveal">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">SOFTWARE SOLUTION</div>
@@ -152,26 +155,171 @@
     
     <div class="feature-wrap">
       <div class="feature-text">
-        <div class="app-badge" style="display:inline-block;padding:5px 12px;background:var(--orange);color:#fff;border-radius:20px;font-size:0.75rem;font-weight:bold;margin-bottom:15px;letter-spacing:1px;">FREE ANDROID APP</div>
-        <h3 class="app-title" style="font-family:'Orbitron',sans-serif;font-size:2rem;margin-bottom:15px;">Shop Management Made Easy</h3>
-        <p class="app-desc" style="color:var(--grey);line-height:1.6;margin-bottom:25px;font-size:1.1rem;">Organize your repair shop efficiently. Manage tickets, track status, and satisfy your customers.</p>
-        <ul class="feature-list" style="list-style:none;padding:0;margin-bottom:30px;">
-          <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Client Management</li>
-          <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> POS Management</li>
-		  <li style="margin-bottom:12px;font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Device Tracking</li>
-          <li style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;"><i class="fas fa-check-circle" style="color:var(--orange);margin-right:10px;"></i> Income Reports</li>
+        <div class="app-badge">FREE ANDROID APP</div>
+        <h3 class="app-title">Shop Management Made Easy</h3>
+        <p class="app-desc">Organize your repair shop efficiently. Manage tickets, track status, and satisfy your customers.</p>
+        <ul class="feature-list">
+          <li>Client Management</li>
+          <li>POS Management</li>
+          <li>Device Tracking</li>
+          <li>Income Reports</li>
         </ul>
-        <a href="https://ufixer.github.io/RepairBooks/" target="_blank" class="btn-primary" style="margin-top:20px;">Download Now</a>
+        <a href="https://ufixer.github.io/RepairBooks/" target="_blank" class="btn-primary">Download Now</a>
       </div>
       <div class="feature-visual">
-        <img src="app.jpg" alt="RepairBooks App Interface" style="width:100%; max-width:250px; height:auto; max-height:450px; border-radius:24px; box-shadow:0 15px 35px rgba(0,0,0,0.6); z-index:1; position:relative; object-fit:contain;">
+        <img src="app.jpg" alt="RepairBooks App Interface">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section reveal" style="background: rgba(18, 48, 160, 0.05);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">HOW IT WORKS</div>
+      <h2 class="section-title">Remote Repair <span>Process</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3>Connect & Chat</h3>
+        <p>Contact us on WhatsApp, describe your mobile issue, and get a quick custom quote.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Secure Payment</h3>
+        <p>Pay safely using Bank transfer, Digital wallets (Raast/JazzCash), or Crypto.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Remote Setup</h3>
+        <p><a href="https://mobifirms.com/flash-tools" target="_blank" class="process-link">Download</a> UltraViewer / USB Redirector on your Windows PC and plug in your phone via USB.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-icon"><i class="fas fa-tools"></i></div>
+        <h3>Expert Repair</h3>
+        <p>Sit back and watch our certified technician remotely flash, unlock, or repair your phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section reveal" style="background: rgba(18, 48, 160, 0.05);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">TESTIMONIALS</div>
+      <h2 class="section-title">What Clients <span>Say</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="test-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="test-text">"Super fast remote repair! My Samsung device was stuck on logo bootloop, and Bashir fixed it remotely in 15 minutes. Highly recommended!"</p>
+        <div class="test-author">
+          <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+          <div>
+            <h4>M. Khan</h4>
+            <span>Mobile Shop Owner</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="test-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="test-text">"RepairBooks is a life saver. The android app makes it so simple to track client tickets and repair statuses. Our daily POS tracking is fully organized now."</p>
+        <div class="test-author">
+          <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+          <div>
+            <h4>Sajid Tech</h4>
+            <span>Lab Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="test-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="test-text">"Mobifirms tools rental system is highly reliable. I rent firmware flash tools weekly, and the server support is outstanding 24/7."</p>
+        <div class="test-author">
+          <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+          <div>
+            <h4>Ahmad Ali</h4>
+            <span>Hardware Specialist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section reveal">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">COMMON INQUIRIES</div>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-trigger">
+          <span>How does remote mobile repairing work?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>We connect remotely to your computer using secure client software like TeamViewer or AnyDesk. You connect the mobile phone to your PC via a USB cable, and our expert technician performs the flashing, unlocking, or configuration steps remotely from our lab.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-trigger">
+          <span>Is the remote repair process safe for my private data?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>Yes, absolutely. The remote session is fully transparent; you can see everything our technician does on your screen in real time. We only access the diagnostic and flashing tools needed for the repair. Your personal data is completely secure.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-trigger">
+          <span>What do I need to prepare before a remote repair session?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>You need a stable internet connection, a Windows PC, and a high-quality USB data cable to connect your phone. Once you confirm the payment, we will guide you on installing the remote sharing software and phone drivers.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-trigger">
+          <span>How do I pay and how do you confirm the payment?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>You can pay via bank transfer (UBL Bank account or IBAN), mobile wallets (Raast/JazzCash), Skrill, or Crypto (USDT/USDC/SOL). After payment, simply share a screenshot of the transaction receipt or TXID on WhatsApp to start your remote session immediately.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PAYMENT -->
-<section id="payment" class="section" style="background:var(--blue-deep);">
+<section id="payment" class="section reveal">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">SECURE TRANSACTIONS</div>
@@ -271,7 +419,7 @@
 </section>
 
 <!-- SOCIAL -->
-<section id="social" class="section">
+<section id="social" class="section reveal">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">CONNECT WITH US</div>
@@ -317,7 +465,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section reveal">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">GET IN TOUCH</div>
@@ -393,7 +541,7 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<script src="script.js?v=1.1"></script>
+<script src="script.js?v=1.2"></script>
 <script>
   let toastTimeout;
   function copyText(text) {
@@ -454,7 +602,7 @@
       requestAnimationFrame(animRing);
     })();
 
-    const targets = 'a, button, .service-card, .payment-card, .payment-val, .social-card, .contact-card-link, .contact-address-card, .qr-item, .payment-qr-col, .wa-float, .scroll-indicator, .hamburger, .qr-modal-close, .toast-notif';
+    const targets = 'a, button, .service-card, .payment-card, .payment-val, .social-card, .contact-card-link, .contact-address-card, .qr-item, .payment-qr-col, .testimonial-card, .faq-trigger, .wa-float, .scroll-indicator, .hamburger, .qr-modal-close, .toast-notif, .process-step';
     document.querySelectorAll(targets).forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.style.width = '20px';
