@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=1.7">
+<link rel="stylesheet" href="style.css?v=1.8">
 </head>
 <body>
 <div id="cursor"></div>
@@ -186,10 +186,16 @@
           <div class="payment-icon"><i class="fas fa-university"></i></div>
           <h3>BANK PAYMENTS</h3>
         </div>
-        <div class="payment-row">
-          <span class="payment-label">UBL A/C NUMBER</span>
-          <div class="payment-val" onclick="copyText('1755-280525299')">1755-280525299</div>
-          <span class="copy-hint">Click to copy</span>
+        <div class="payment-row-split">
+          <div class="payment-info-col">
+            <span class="payment-label">UBL A/C NUMBER / Open QR To Scan</span>
+            <div class="payment-val" onclick="copyText('1755-280525299')">1755-280525299</div>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="payment-qr-col" onclick="openQRModal('ubl.png', 'UBL Account QR')">
+            <span>UBL QR</span>
+            <img src="ubl.png" alt="UBL Account QR">
+          </div>
         </div>
         <div class="payment-row">
           <span class="payment-label">IBAN</span>
@@ -204,7 +210,7 @@
         
         <!-- Crypto QR Codes -->
         <div class="qr-section">
-          <span class="payment-label">SCAN TO PAY CRYPTO</span>
+          <span class="payment-label">OPEN QR & SCAN TO PAY CRYPTO</span>
           <div class="qr-container">
             <div class="qr-item" onclick="openQRModal('TRC20.PNG', 'USDT (TRC20)')">
               <span>TRC20 QR</span>
@@ -233,10 +239,16 @@
           <div class="payment-val" onclick="copyText('mobifirms@gmail.com')">mobifirms@gmail.com</div>
           <span class="copy-hint">Click to copy</span>
         </div>
-        <div class="payment-row">
-          <span class="payment-label">BINANCE ID</span>
-          <div class="payment-val" onclick="copyText('35215239')">35215239</div>
-          <span class="copy-hint">Click to copy</span>
+        <div class="payment-row-split">
+          <div class="payment-info-col">
+            <span class="payment-label">BINANCE ID / Open QR To Scan</span>
+            <div class="payment-val" onclick="copyText('35215239')">35215239</div>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="payment-qr-col" onclick="openQRModal('binance.PNG', 'Scan With Binance To Pay')">
+            <span>Binance QR</span>
+            <img src="binance.PNG" alt="Binance QR">
+          </div>
         </div>
         <div class="payment-row">
           <span class="payment-label">USDT (TRC20 ONLY)</span>
@@ -442,7 +454,7 @@
       requestAnimationFrame(animRing);
     })();
 
-    const targets = 'a, button, .service-card, .payment-card, .payment-val, .social-card, .contact-card-link, .contact-address-card, .qr-item, .wa-float, .scroll-indicator, .hamburger, .qr-modal-close, .toast-notif';
+    const targets = 'a, button, .service-card, .payment-card, .payment-val, .social-card, .contact-card-link, .contact-address-card, .qr-item, .payment-qr-col, .wa-float, .scroll-indicator, .hamburger, .qr-modal-close, .toast-notif';
     document.querySelectorAll(targets).forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.style.width = '20px';
