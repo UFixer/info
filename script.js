@@ -45,39 +45,48 @@ document.querySelectorAll(".reveal").forEach(el => {
   revealObserver.observe(el);
 });
 
-// ScrollSpy & Reading Progress
+// ScrollSpy & Reading Progress (throttled via rAF)
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
 const progressBar = document.getElementById("scroll-progress");
+let scrollTicking = false;
 
 window.addEventListener("scroll", () => {
-  // 1. Reading progress
-  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-  if (progressBar) {
-    progressBar.style.width = scrolled + "%";
-  }
-
-  // 2. ScrollSpy highlight
-  let currentSectionId = "";
-  const scrollPos = window.scrollY + 120; // Offset for fixed nav height
-  
-  sections.forEach(section => {
-    const top = section.offsetTop;
-    const height = section.offsetHeight;
-    if (scrollPos >= top && scrollPos < top + height) {
-      currentSectionId = section.getAttribute("id");
-    }
-  });
-
-  if (currentSectionId) {
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${currentSectionId}`) {
-        link.classList.add("active");
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      // 1. Reading progress
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      if (progressBar) {
+        progressBar.style.width = scrolled + "%";
       }
+
+      // 2. ScrollSpy highlight
+      let currentSectionId = "";
+      const scrollPos = window.scrollY + 120; // Offset for fixed nav height
+      
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const sHeight = section.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + sHeight) {
+          currentSectionId = section.getAttribute("id");
+        }
+      });
+
+      if (currentSectionId) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+
+      scrollTicking = false;
     });
+    scrollTicking = true;
   }
 });
+
 

@@ -8,9 +8,10 @@
 <meta name="keywords" content="UFixer, remote repair, mobile repairing, shop management software, RepairBooks, Bashir Ahmad, Pakistan mobile repair">
 <meta name="author" content="Bashir Ahmad">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=2.0">
+<link rel="stylesheet" href="style.css?v=3.1">
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -58,15 +59,15 @@
     <span class="nav-brand">UFIXER</span>
   </div>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
     <li><a href="#repairbooks">RepairBooks</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#payment">Payment</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://wa.me/923136969696" class="nav-cta" target="_blank">📲 WhatsApp</a>
+  <a href="https://wa.me/923136969696" class="nav-cta" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
@@ -91,7 +92,7 @@
   </div>
 
   <!-- Animated Scroll Indicator -->
-  <div class="scroll-indicator" onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">
+  <div class="scroll-indicator" onclick="document.getElementById('repairbooks').scrollIntoView({ behavior: 'smooth' })">
     <div class="mouse">
       <div class="wheel"></div>
     </div>
@@ -104,45 +105,19 @@
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat-item" style="text-align:center;">
-    <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">10k+</div>
-    <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Devices Fixed</div>
+  <div class="stat-item">
+    <div class="stat-num">10k+</div>
+    <div class="stat-label">Devices Fixed</div>
   </div>
-  <div class="stat-item" style="text-align:center;">
-    <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">99%</div>
-    <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Success Rate</div>
+  <div class="stat-item">
+    <div class="stat-num">99%</div>
+    <div class="stat-label">Success Rate</div>
   </div>
-  <div class="stat-item" style="text-align:center;">
-    <div class="stat-num" style="font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--orange);font-weight:700;">24/7</div>
-    <div class="stat-label" style="font-family:'Rajdhani',sans-serif;color:var(--grey);letter-spacing:1px;font-size:0.9rem;">Remote Support</div>
+  <div class="stat-item">
+    <div class="stat-num">24/7</div>
+    <div class="stat-label">Remote Support</div>
   </div>
 </div>
-
-<!-- SERVICES -->
-<section id="services" class="section reveal">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">WHAT I DO</div>
-      <h2 class="section-title">Premium <span>Services</span></h2>
-      <div class="section-line"></div>
-    </div>
-    
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-        <h3>Online Remote Services</h3>
-        <p>Expert remote unbricking, flashing, and software troubleshooting for all major mobile brands.</p>
-        <a href="https://mobifirms.com/services" target="_blank" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-tools"></i></div>
-        <h3>Tools Rental</h3>
-        <p>Rent professional mobile repair tools directly from Mobifirms to boost your repair capabilities.</p>
-        <a href="https://mobifirms.com/tools-rental" target="_blank" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- REPAIRBOOKS -->
 <section id="repairbooks" class="section reveal">
@@ -164,10 +139,36 @@
           <li>Device Tracking</li>
           <li>Income Reports</li>
         </ul>
-        <a href="https://ufixer.github.io/RepairBooks/" target="_blank" class="btn-primary">Download Now</a>
+        <a href="https://ufixer.github.io/RepairBooks/" target="_blank" rel="noopener noreferrer" class="btn-primary">Download Now</a>
       </div>
       <div class="feature-visual">
         <img src="app.jpg" alt="RepairBooks App Interface">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section reveal">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">WHAT I DO</div>
+      <h2 class="section-title">Premium <span>Services</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Online Remote Services</h3>
+        <p>Expert remote unbricking, flashing, and software troubleshooting for all major mobile brands.</p>
+        <a href="https://mobifirms.com/services" target="_blank" rel="noopener noreferrer" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tools"></i></div>
+        <h3>Tools Rental</h3>
+        <p>Rent professional mobile repair tools directly from Mobifirms to boost your repair capabilities.</p>
+        <a href="https://mobifirms.com/tools-rental" target="_blank" rel="noopener noreferrer" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -198,7 +199,7 @@
         <div class="step-num">03</div>
         <div class="step-icon"><i class="fas fa-laptop-code"></i></div>
         <h3>Remote Setup</h3>
-        <p><a href="https://mobifirms.com/flash-tools" target="_blank" class="process-link">Download</a> UltraViewer / USB Redirector on your Windows PC and plug in your phone via USB.</p>
+        <p><a href="https://mobifirms.com/flash-tools" target="_blank" rel="noopener noreferrer" class="process-link">Download</a> UltraViewer / USB Redirector on your Windows PC and plug in your phone via USB.</p>
       </div>
       <div class="process-step">
         <div class="step-num">04</div>
@@ -427,38 +428,38 @@
       <div class="section-line"></div>
     </div>
     
-    <div class="social-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;">
-      <a href="https://www.youtube.com/UFixer" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#ff0000;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-youtube"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">YouTube</div>
+    <div class="social-grid">
+      <a href="https://www.youtube.com/UFixer" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#ff0000"><i class="fab fa-youtube"></i></div>
+        <div class="social-name">YouTube</div>
       </a>
-      <a href="https://www.tiktok.com/@ufixer" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#fff;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-tiktok"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">TikTok</div>
+      <a href="https://www.tiktok.com/@ufixer" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon"><i class="fab fa-tiktok"></i></div>
+        <div class="social-name">TikTok</div>
       </a>
-      <a href="https://www.instagram.com/Ufixers" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#e1306c;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-instagram"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Instagram</div>
+      <a href="https://www.instagram.com/Ufixers" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#e1306c"><i class="fab fa-instagram"></i></div>
+        <div class="social-name">Instagram</div>
       </a>
-      <a href="https://www.facebook.com/Ufixers" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#1877f2;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-facebook"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Facebook</div>
+      <a href="https://www.facebook.com/Ufixers" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#1877f2"><i class="fab fa-facebook"></i></div>
+        <div class="social-name">Facebook</div>
       </a>
-      <a href="https://twitter.com/Geeks_Board" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#1da1f2;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-twitter"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Twitter</div>
+      <a href="https://twitter.com/Geeks_Board" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#1da1f2"><i class="fab fa-twitter"></i></div>
+        <div class="social-name">Twitter</div>
       </a>
-      <a href="https://t.me/uFixer" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#0088cc;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-telegram"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Telegram Ch</div>
+      <a href="https://t.me/uFixer" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#0088cc"><i class="fab fa-telegram"></i></div>
+        <div class="social-name">Telegram Ch</div>
       </a>
-      <a href="https://t.me/uFixers" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#0088cc;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-telegram"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">Telegram Grp</div>
+      <a href="https://t.me/uFixers" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#0088cc"><i class="fab fa-telegram"></i></div>
+        <div class="social-name">Telegram Grp</div>
       </a>
-      <a href="https://whatsapp.com/channel/0029Vabkv9dL7UVY9Ez27j2q" target="_blank" class="social-card" style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;transition:all 0.3s;">
-        <div class="social-icon" style="color:#25d366;font-size:2.5rem;margin-bottom:10px;"><i class="fab fa-whatsapp"></i></div>
-        <div class="social-name" style="color:#fff;font-family:'Rajdhani',sans-serif;font-weight:600;">WhatsApp Ch</div>
+      <a href="https://whatsapp.com/channel/0029Vabkv9dL7UVY9Ez27j2q" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon" style="color:#25d366"><i class="fab fa-whatsapp"></i></div>
+        <div class="social-name">WhatsApp Ch</div>
       </a>
     </div>
   </div>
@@ -504,7 +505,7 @@
 
         <!-- Quick Action Links -->
         <div class="contact-links-wrap">
-          <a href="https://wa.me/923136969696" target="_blank" class="contact-card-link">
+          <a href="https://wa.me/923136969696" target="_blank" rel="noopener noreferrer" class="contact-card-link">
             <div class="link-icon"><i class="fab fa-whatsapp"></i></div>
             <div class="link-info">
               <span class="link-label">WHATSAPP</span>
@@ -532,24 +533,53 @@
   </div>
 </section>
 
-<footer style="text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,0.05);background:#070a14;">
-  <div class="footer-brand" style="font-family:'Orbitron',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:2px;margin-bottom:10px;"><span style="color:var(--orange)">U</span>FIXER</div>
-  <div class="footer-copy" style="color:var(--grey);font-family:'Rajdhani',sans-serif;font-size:0.9rem;">© 2026 Bashir Ahmad. All rights reserved.</div>
+<footer>
+  <div class="footer-brand"><span style="color:var(--orange)">U</span>FIXER</div>
+  <div class="footer-copy">© 2026 Bashir Ahmad. All rights reserved.</div>
 </footer>
 
-<a href="https://wa.me/923136969696" target="_blank" class="wa-float" style="position:fixed;bottom:30px;right:30px;width:60px;height:60px;background:#25d366;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:30px;box-shadow:0 4px 10px rgba(37,211,102,0.4);z-index:100;transition:all 0.3s;text-decoration:none;">
+<a href="https://wa.me/923136969696" target="_blank" rel="noopener noreferrer" class="wa-float">
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<script src="script.js?v=1.2"></script>
+<!-- QR Modal -->
+<div id="qrModal" class="qr-modal">
+  <div class="qr-modal-content">
+    <span class="qr-modal-close" onclick="closeQRModal()">&times;</span>
+    <h3 id="modalTitle">USDT (TRC20) QR</h3>
+    <img id="modalImg" src="" alt="QR Code">
+    <button onclick="closeQRModal()" class="btn-primary" style="padding: 10px 24px; font-size: 0.9rem; margin: 0 auto; display: block;">Close</button>
+  </div>
+</div>
+
+<script src="script.js?v=1.3"></script>
 <script>
   let toastTimeout;
   function copyText(text) {
-    navigator.clipboard.writeText(text).then(function() {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function() {
+        showToast('Copied: ' + text);
+      }, function() {
+        fallbackCopy(text);
+      });
+    } else {
+      fallbackCopy(text);
+    }
+  }
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
       showToast('Copied: ' + text);
-    }, function(err) {
-      console.error('Could not copy text: ', err);
-    });
+    } catch(e) {
+      showToast('Copy failed');
+    }
+    document.body.removeChild(ta);
   }
 
   function showToast(msg) {
@@ -574,17 +604,22 @@
     modal.style.display = 'none';
     document.body.style.overflow = '';
   }
-  window.onclick = function(event) {
+  window.addEventListener('click', function(event) {
     const modal = document.getElementById('qrModal');
-    if (event.target == modal) {
+    if (event.target === modal) {
       closeQRModal();
     }
-  }
+  });
+  window.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeQRModal();
+    }
+  });
 
-  // Custom Cursor Script
+  // Custom Cursor Script (optimised — skips rAF when idle)
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursor-ring');
-  let mx = 0, my = 0, rx = 0, ry = 0;
+  let mx = 0, my = 0, rx = 0, ry = 0, cursorMoved = false;
 
   if (cursor && ring) {
     document.addEventListener('mousemove', (e) => {
@@ -592,13 +627,19 @@
       my = e.clientY;
       cursor.style.left = mx + 'px';
       cursor.style.top = my + 'px';
+      cursorMoved = true;
     });
 
     (function animRing() {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      ring.style.left = rx + 'px';
-      ring.style.top = ry + 'px';
+      if (cursorMoved) {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        if (Math.abs(mx - rx) < 0.5 && Math.abs(my - ry) < 0.5) {
+          cursorMoved = false;
+        }
+      }
       requestAnimationFrame(animRing);
     })();
 
@@ -621,15 +662,5 @@
     });
   }
 </script>
-
-<!-- QR Modal -->
-<div id="qrModal" class="qr-modal">
-  <div class="qr-modal-content">
-    <span class="qr-modal-close" onclick="closeQRModal()">&times;</span>
-    <h3 id="modalTitle">USDT (TRC20) QR</h3>
-    <img id="modalImg" src="" alt="QR Code">
-    <button onclick="closeQRModal()" class="btn-primary" style="padding: 10px 24px; font-size: 0.9rem; margin: 0 auto; display: block;">Close</button>
-  </div>
-</div>
 </body>
 </html>
