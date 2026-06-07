@@ -996,24 +996,24 @@ footer{
 
 @media (max-width: 480px) {
   .payment-row-split {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
   }
-  .payment-qr-col {
-    max-width: none !important;
-    flex-direction: row !important;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 12px;
+  .payment-info-col {
+    min-width: 0;
+    flex: 1;
   }
-  .payment-qr-col span {
-    margin-bottom: 0 !important;
+  .payment-qr-col {
+    max-width: 90px;
+    padding: 6px 8px;
   }
   .payment-qr-col img {
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .payment-qr-col span {
+    font-size: 0.62rem;
   }
 }
 
